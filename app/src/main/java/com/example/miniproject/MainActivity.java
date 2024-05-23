@@ -242,6 +242,7 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("betAmount", totalBet);
         startActivity(intent);
 
+
         btnStart.setEnabled(true);
     }
     private List<Integer> getSelectedMoto() {
