@@ -218,17 +218,25 @@ public class MainActivity extends AppCompatActivity {
         if (progress2 >= 100) winners.add(2);
         if (progress3 >= 100) winners.add(3);
         if (progress4 >= 100) winners.add(4);
-
+        List<Integer> selectedMoto = getSelectedMoto();
         List<Integer> selectedTanks = getSelectedMoto();
         List<Integer> betAmounts = getBetAmounts(selectedTanks);
         boolean isWinner = false;
         boolean isTie = winners.size() > 1;
 
         int totalBet = 0;
+        int winnings = 0;
+        int losses = 0;
         for (int betAmount : betAmounts) {
             totalBet += betAmount;
         }
-
+        for (int i = 0; i < selectedMoto.size(); i++) {
+            if (winners.contains(selectedMoto.get(i))) {
+                winnings += betAmounts.get(i);
+            } else {
+                losses += betAmounts.get(i);
+            }
+        }
         int newMoney = calculateMoney(winners, selectedTanks, betAmounts);
 
         // Start ResultActivity
@@ -240,6 +248,9 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("isTie", isTie);
         intent.putExtra("newMoney", newMoney);
         intent.putExtra("betAmount", totalBet);
+        intent.putExtra("winnings", winnings);
+        intent.putExtra("losses", losses);
+        intent.putExtra("totalBet", totalBet);
         startActivity(intent);
 
 
@@ -279,6 +290,7 @@ public class MainActivity extends AppCompatActivity {
 
         for (int i = 0; i < selectedMoto.size(); i++) {
             int selectedTank = selectedMoto.get(i);
+            int selectedMotoNumber = selectedMoto.get(i);
             int betAmount = betAmounts.get(i);
 
             if (winners.contains(selectedTank)) {
