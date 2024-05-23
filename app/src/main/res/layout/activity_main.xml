@@ -2,98 +2,155 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:background="@drawable/anh"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
     <EditText
         android:id="@+id/editMoto3"
         android:layout_width="75dp"
         android:layout_height="51dp"
         android:ems="10"
-        android:inputType="text"
-        android:text="Name"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="299dp"
+        android:hint="0"
+        android:inputType="number"
+        android:textColorHint="#fff"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.106"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.778"
         tools:ignore="MissingConstraints" />
 
     <CheckBox
         android:id="@+id/cbMoto1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="103dp"
-        tools:layout_editor_absoluteY="166dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.42"
+        tools:ignore="MissingConstraints" />
 
     <SeekBar
         android:id="@+id/sbMoto3"
-        android:layout_width="182dp"
-        android:layout_height="40dp"
+        android:layout_width="812dp"
+        android:layout_height="48dp"
         android:max="100"
-        android:thumb="@drawable/moto2"
+        android:thumb="@drawable/moto_race2"
         android:thumbOffset="-1dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="178dp"
-        tools:layout_editor_absoluteY="306dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.772"
+        tools:ignore="MissingConstraints" />
 
     <SeekBar
         android:id="@+id/sbMoto1"
-        android:layout_width="167dp"
-        android:layout_height="55dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="175dp"
-        tools:layout_editor_absoluteY="166dp" />
+        android:thumb="@drawable/m_2"
+        android:thumbOffset="-1dp"
+        android:layout_width="815dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.972"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.422"
+        tools:ignore="MissingConstraints" />
+
 
     <CheckBox
         android:id="@+id/cbMoto2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="103dp"
-        tools:layout_editor_absoluteY="235dp" />
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6"
+        tools:ignore="MissingConstraints" />
 
     <CheckBox
         android:id="@+id/cbMoto3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="103dp"
-        tools:layout_editor_absoluteY="299dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.772"
+        tools:ignore="MissingConstraints" />
 
     <CheckBox
         android:id="@+id/cbMoto4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="103dp"
-        tools:layout_editor_absoluteY="381dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.945"
+        tools:ignore="MissingConstraints" />
 
     <SeekBar
         android:id="@+id/sbMoto4"
-        android:layout_width="143dp"
-        android:layout_height="44dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="178dp"
-        tools:layout_editor_absoluteY="388dp" />
+        android:layout_width="817dp"
+        android:layout_height="55dp"
+
+        android:thumb="@drawable/m_3"
+        android:thumbOffset="-1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.983"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.944"
+        tools:ignore="MissingConstraints" />
 
     <SeekBar
         android:id="@+id/sbMoto2"
-        android:layout_width="144dp"
-        android:layout_height="53dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="178dp"
-        tools:layout_editor_absoluteY="235dp" />
+        android:layout_width="815dp"
+        android:layout_height="46dp"
+        android:thumb="@drawable/m_4"
+        android:thumbOffset="-1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.972"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.601"
+        tools:ignore="MissingConstraints" />
+
 
     <EditText
         android:id="@+id/editMoto1"
         android:layout_width="81dp"
         android:layout_height="46dp"
         android:ems="10"
-        android:inputType="text"
-        android:text="Name"
-        tools:layout_editor_absoluteX="22dp"
-        tools:layout_editor_absoluteY="168dp"
+        android:hint="0"
+        android:textColor="#fff"
+        android:inputType="number"
+        android:textColorHint="#fff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.422"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -101,10 +158,18 @@
         android:layout_width="77dp"
         android:layout_height="45dp"
         android:ems="10"
-        android:inputType="text"
-        android:text="Name"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="235dp"
+        android:hint="0"
+        android:inputType="number"
+        android:textColorHint="#fff"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.602"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -112,47 +177,91 @@
         android:layout_width="71dp"
         android:layout_height="51dp"
         android:ems="10"
-        android:inputType="text"
-        android:text="Name"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="22dp"
-        tools:layout_editor_absoluteY="381dp" />
+        android:hint="0"
+        android:inputType="number"
+        android:textColorHint="#fff"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.944"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imgUser"
         android:layout_width="56dp"
         android:layout_height="42dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.023"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.123"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="19dp"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/txtUser"
-        android:layout_width="93dp"
+        android:layout_width="115dp"
         android:layout_height="31dp"
-        android:layout_marginTop="32dp"
-        android:text="TextView"
+        android:text="UserName"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="101dp" />
+        app:layout_constraintVertical_bias="0.146"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/btnStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="Start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.823"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="207dp" />
+        app:layout_constraintVertical_bias="0.23"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/txtTotalMoney"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#FF9800"
+        android:padding="10dp"
         android:text="Total Money: "
+        android:textColor="#fff"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.024"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="36dp" />
+        app:layout_constraintVertical_bias="0.245"
+        tools:ignore="ExtraText,MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.965"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.23"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

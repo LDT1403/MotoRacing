@@ -6,7 +6,9 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,6 +37,10 @@ public class MainActivity extends AppCompatActivity {
     private Random random =new Random();
 
     private int money = 1000;
+
+    private ImageView imageView;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
         btnStart=(Button) findViewById(R.id.btnStart);
         txtUser=(TextView) findViewById(R.id.txtUser);
         txtTotalMoney=(TextView) findViewById(R.id.txtTotalMoney);
+        imageView =(ImageView) findViewById(R.id.imgUser);
+        btnReset =(Button) findViewById(R.id.btnReset);
 
 
         String username = getIntent().getStringExtra("username");
@@ -63,15 +71,83 @@ public class MainActivity extends AppCompatActivity {
         } else {
             money = 1000;
         }
+        editMoto1.setVisibility(View.GONE);
+        editMoto2.setVisibility(View.GONE);
+        editMoto3.setVisibility(View.GONE);
+        editMoto4.setVisibility(View.GONE);
         txtUser.setText(username);
+        imageView.setImageResource(R.drawable.avatar);
         txtTotalMoney.setText("Total Money :" + money);
+
+        btnReset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Reset();
+            }
+        });
+
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Start();
             }
         });
+        cBmoto1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    editMoto1.setVisibility(View.VISIBLE);
+                }else{
+                    editMoto1.setVisibility(View.GONE);
+                }
+            }
+        });
+        cBmoto4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    editMoto4.setVisibility(View.VISIBLE);
+                }else{
+                    editMoto4.setVisibility(View.GONE);
 
+                }
+            }
+        });
+        cBmoto2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    editMoto2.setVisibility(View.VISIBLE);
+                }else{
+                    editMoto2.setVisibility(View.GONE);
+
+                }
+            }
+        });
+        cBmoto3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    editMoto3.setVisibility(View.VISIBLE);
+                }else{
+                    editMoto3.setVisibility(View.GONE);
+
+                }
+            }
+        });
+
+
+    }
+    private void Reset(){
+        sBmoto1.setProgress(0);
+        sBmoto2.setProgress(0);
+        sBmoto3.setProgress(0);
+        sBmoto4.setProgress(0);
+        cBmoto1.setChecked(false);
+        cBmoto2.setChecked(false);
+        cBmoto3.setChecked(false);
+        cBmoto4.setChecked(false);
+        txtTotalMoney.setText("Total Money :" + money);
 
     }
     private boolean validate() {
